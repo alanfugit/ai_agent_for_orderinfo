@@ -1,0 +1,16 @@
+# Web Framework
+fastapi
+uvicorn[standard]
+
+# Configuration
+pydantic-settings
+
+# Database
+SQLAlchemy
+mysql-connector-python
+
+# LangChain
+langchain
+langchain-community
+langchain-experimental
+langchain-ollama

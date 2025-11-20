@@ -208,9 +208,11 @@ def ask_question(session, question: str, summary: bool = True) -> str:
 SQL: {query}
 Data: {result}
 
+IMPORTANT: Answer in the SAME LANGUAGE as the question. If the question is in Chinese, answer in Chinese. If in English, answer in English.
+
 Answer the question concisely based on the Data. 
-- If the question asks for a count/sum/total and Data is empty or "0", answer with "0" or "總額為0".
-- If Data is empty for other types of questions, say "No data found".
+- If the question asks for a count/sum/total and Data is empty or "0", answer with "0" or "總額為0" (in Chinese) or "Total is 0" (in English).
+- If Data is empty for other types of questions, say "No data found" or "沒有找到數據" (in Chinese).
 Answer: """
         )
         

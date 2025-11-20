@@ -33,4 +33,16 @@ def ask_endpoint(request: QuestionRequest, db: Session = Depends(get_db)):
 
 @app.get("/health")
 def health_check():
-    return {"status": "ok"}
+    """
+    Health check endpoint.
+    """
+    return {"status": "healthy"}
+
+@app.post("/clear-cache")
+def clear_cache():
+    """
+    Clear the SQL generation cache.
+    """
+    from app.service import generate_sql_cached
+    generate_sql_cached.cache_clear()
+    return {"status": "cache cleared", "message": "SQL generation cache has been cleared"}

@@ -1,16 +1,10 @@
-# Web Framework
 fastapi
-uvicorn[standard]
-
-# Configuration
-pydantic-settings
-
-# Database
-SQLAlchemy
-mysql-connector-python
-
-# LangChain
+uvicorn
+sqlalchemy
+pymysql
+requests
+python-dotenv
 langchain
 langchain-community
-langchain-experimental
 langchain-ollama
+
